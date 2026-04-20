@@ -1,74 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7FA">
+    android:background="#ECECEC">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:orientation="vertical">
 
-        <!-- Profile Section -->
-        <ImageView
-            android:id="@+id/profileImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:src="@drawable/profile"
-            android:scaleType="centerCrop" />
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#3949AB"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ishwar Singh Shekhawat"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginTop="12dp"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:layout_marginBottom="10dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Android Developer | Java | Firebase"
-            android:textSize="14sp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"/>
+            <TextView
+                android:text="Manan Bansal"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="Computer Science Engineering"
+                android:textColor="#DDDDDD"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="PIET"
+                android:textColor="#DDDDDD"
+                android:textSize="13sp" />
+
+            <TextView
+                android:text="Section: B | Reg No: PIET23CS100"
+                android:textColor="#DDDDDD"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/githubIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@android:drawable/ic_menu_share"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:id="@+id/linkedinIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@android:drawable/ic_menu_info_details" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- About -->
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:padding="12dp"
+            android:background="#F3F3F3"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="About Me"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="I am a dedicated Computer Science student passionate about software development and problem solving. Experienced in C++, Java, and Python."
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
 
         <!-- Skills -->
-        <TextView
-            android:text="Skills"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:padding="12dp"
+            android:background="#F3F3F3"
+            android:orientation="vertical">
 
-        <TextView
-            android:text="• Java\n• Android Development\n• Firebase\n• XML UI Design"
-            android:layout_marginBottom="20dp"/>
+            <TextView
+                android:text="Technical Skills"
+                android:textStyle="bold" />
 
-        <!-- Projects -->
-        <TextView
-            android:text="Projects"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            <TextView
+                android:text="• C, C++, Java, Python, PHP\n• HTML, CSS, JavaScript\n• MySQL\n• Linux, Windows\n• Git, GitHub, VS Code"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
 
-        <TextView
-            android:text="• Contact Book App\n• Notes App\n• Survey App\n• Spinner Profile App"
-            android:layout_marginBottom="20dp"/>
+        <!-- Academic -->
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:padding="12dp"
+            android:background="#F3F3F3"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Academic Progress"
+                android:textStyle="bold" />
+
+            <TextView android:text="10th Percentage: 90%" />
+            <TextView android:text="12th Percentage: 85%" />
+            <TextView android:text="Current CGPA: 9.5" />
+        </LinearLayout>
+
+        <!-- Hobbies -->
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:padding="12dp"
+            android:background="#F3F3F3"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Hobbies"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="• Coding and Problem Solving\n• Learning Linux\n• Exploring New Technology"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
 
         <!-- Contact -->
-        <TextView
-            android:text="Contact"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:padding="12dp"
+            android:background="#F3F3F3"
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/email"
-            android:text="Email: example@gmail.com"
-            android:textColor="#1E88E5"
-            android:layout_marginTop="8dp"/>
+            <TextView
+                android:text="Get In Touch"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Email"
+                android:background="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Watch Introduction Video"
+                android:background="#283593"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+</ScrollView>
