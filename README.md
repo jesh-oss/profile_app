@@ -77,4 +77,4 @@ PortfolioApp/
 
 ## 👨‍💻 Author
 
-**Ishwar Singh Shekhawat**
+**Manan Bansal**
