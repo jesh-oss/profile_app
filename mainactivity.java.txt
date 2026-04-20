@@ -1,27 +1,44 @@
-package com.example.portfolio_app;
+package com.example.profileapp;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView email;
+    ImageView githubIcon, linkedinIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        email = findViewById(R.id.email);
+        githubIcon = findViewById(R.id.githubIcon);
+        linkedinIcon = findViewById(R.id.linkedinIcon);
 
-        email.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_SENDTO);
-            intent.setData(Uri.parse("mailto:example@gmail.com"));
-            startActivity(intent);
+        githubIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "GitHub Clicked", Toast.LENGTH_SHORT).show();
+            }
         });
+
+        linkedinIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "LinkedIn Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.btnEmail).setOnClickListener(v ->
+                Toast.makeText(this, "Send Email Clicked", Toast.LENGTH_SHORT).show()
+        );
+
+        findViewById(R.id.btnVideo).setOnClickListener(v ->
+                Toast.makeText(this, "Watch Video Clicked", Toast.LENGTH_SHORT).show()
+        );
     }
 }
